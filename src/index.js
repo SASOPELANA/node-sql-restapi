@@ -10,7 +10,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 app.use(indexRoutes);
-app.use(employeesRoutes);
+app.use("/api", employeesRoutes);
 
 const PORT = 3000;
 app.listen(PORT, () => {
