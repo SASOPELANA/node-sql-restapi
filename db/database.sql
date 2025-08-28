@@ -5,13 +5,22 @@ CREATE DATABASE IF NOT EXISTS companydb;
 USE companydb;
 
 -- Crear tablas 
-CREATE TABLE employee(
+CREATE TABLE employee (
   id INT(11) NOT NULL AUTO_INCREMENT,
   name VARCHAR(60) DEFAULT NULL,
   apellido VARCHAR(60) DEFAULT NULL,
   salary INT(5) DEFAULT NULL,
-  PRIMARY KEY(id)
+  PRIMARY KEY (id)
 );
 
 -- Ver descripción de la tabla 
 DESCRIBE employee;
+
+-- Insertar datos en la tabla 
+INSERT INTO
+  employee (name, apellido, salary)
+VALUES
+  ('Juan', 'Perez', 1500),
+  ('Daniel', 'Less', 2000),
+  ('Maria', 'Yeuo', 1500),
+  ('Jose', 'Correa', 2000);
