@@ -57,6 +57,41 @@ Esto permite que la API funcione de forma segura y escalable en Railway usando M
 
 Consulta la documentación de rutas en el proyecto para ver los endpoints disponibles y cómo utilizarlos.
 
+## Métodos de la API
+
+A continuación se muestran ejemplos de los métodos HTTP disponibles para gestionar empleados.  
+**Las consultas HTTP se realizan usando la herramienta [HTTPie](https://httpie.io/), que permite enviar peticiones desde la terminal de forma sencilla.**
+
+### Obtener todos los empleados
+```
+http GET https://node-sql-restapi-production.up.railway.app/api/employees/
+```
+
+### Obtener un empleado por ID
+```
+http GET https://node-sql-restapi-production.up.railway.app/api/employees/2
+```
+
+### Crear un nuevo empleado
+```
+http POST https://node-sql-restapi-production.up.railway.app/api/employees \
+  name='Jose Maria' \
+  apellido=GATO \
+  salary=3200
+```
+
+### Actualizar parcialmente un empleado
+```
+http PATCH https://node-sql-restapi-production.up.railway.app/api/employees/2 \
+  name='Jose Maria' \
+  apellido=Prota
+```
+
+### Eliminar un empleado
+```
+http DELETE https://node-sql-restapi-production.up.railway.app/api/employees/2
+```
+
 ## Herramientas para manipular tablas y creación de base de datos
 
 Para gestionar y manipular tus tablas MySQL/MariaDB desde la terminal, puedes usar herramientas como:
